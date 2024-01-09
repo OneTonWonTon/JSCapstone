@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./style/css/styles.css">
+        
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Do you wanna go out with me?</h1>
+                <h2 class = "header_text">UWU UWU UWU UWU UWU</h2>
+            </div>
+            <div class="gif_container">
+                <img src="https://media.giphy.com/media/LnKonfpQ44fNvuGLkA/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()">No</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    var numberOfAttempts = 0;
+                    function moveButton() {
+                        var buttonEl = document.getElementById('noButton');
+                        var buttonWidth = buttonEl.offsetWidth;
+                        var buttonHeight = buttonEl.offsetHeight;
+
+                        var maxPositionX = window.innerWidth - buttonWidth;
+                        var maxPositionY = window.innerHeight - buttonHeight;
+
+                        var x = Math.random() * maxPositionX;
+                        var y = Math.random() * maxPositionY;
+
+                        buttonEl.style.position = 'absolute';
+
+                        if (x > maxPositionX) { 
+                            document.getElementById('noButton').style.left = `${maxPositionX}px`;
+                        } else {
+                            document.getElementById('noButton').style.left = `${x}px`;
+                        }
+
+                        if (y > maxPositionY) { 
+                            document.getElementById('noButton').style.top = `${maxPositionY}px`;
+                        } else {
+                            document.getElementById('noButton').style.top = `${y}px`;
+                        }
+
+                        numberOfAttempts++;
+                        buttonEl.style.transform = `scale(${numberOfAttempts * 0.1 + 1})`;
+                        if (numberOfAttempts > 5) {
+                            buttonEl.innerHTML = "Just click on me already!";
+                        }
+
+                        if (numberOfAttempts > 10) {
+                            buttonEl.innerHTML = "Didn't click on 'No' yet?";
+                        }
+                        if (numberOfAttempts > 15) {
+                            buttonEl.innerHTML = "One more try and I'll disappear!";
+                        }
+
+                        if (numberOfAttempts > 16) {
+                            buttonEl.style.display = "none";
+                        }
+}
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>

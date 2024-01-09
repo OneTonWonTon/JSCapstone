@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/snow.css">
+
+  
+  <title>Season of Love</title>
+  <script src="js/validation.js" defer></script>
+</head>
+<body>
+  <div class="snow"></div>
+  <main>
+    <div class="content">
+      <h1>I heard Valentines Day is near</h1>
+      <p>This person has a very important question for you but you first need to fill out 
+        the form to see the question.</p>
+    </div>
+    <div class="signup">
+      <div class="signup__pricing">
+        <p><strong>YOU WILL NOT REGRET THIS!</strong></p>
+      </div>
+      <form action="#" class="signup__form">
+        <input type="text" name="first-name" id="first-name" aria-label="First Name" placeholder="First Name" required>
+        <input type="text" name="last-name" id="last-name" aria-label="Last Name" placeholder="Last Name" required>
+        <input type="email" name="email" id="email" aria-label="Email Address" placeholder="Email Address" required>
+        <input type="tel" name="tel" id="password" aria-label="Password" placeholder="Phone Number" required>
+        <!-- Use a button with an onclick event to handle redirection -->
+        <button type="button" class="styled-button" onclick="redirectPage()"  
+        onmouseover="this.style.backgroundColor='hsl(154, 75%, 58%)'" onmouseout="this.style.backgroundColor='#00b894'">Wink Wink</button>
+
+
+        <span class="terms-notice">By clicking the button, you are agreeing to our <span>Terms and Services</span></span>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>
