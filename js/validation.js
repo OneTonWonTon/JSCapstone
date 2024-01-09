@@ -54,7 +54,7 @@ function removeErrorMessage(e) {
 
 // redirect.js
 function redirectPage() {
-    window.location.href = "/ask.html";
+    window.location.href = "https://onetonwonton.github.io/CapstoneJS2/";
   }
 
 
